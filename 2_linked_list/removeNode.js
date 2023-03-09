@@ -22,9 +22,9 @@ const removeNodeIterative = (head, target) => {
     return head
 }
 
-const removeNode = (head, target, prev=null) => {
+const removeNode = (head, target) => {
     if (head === null) return null
     if (head.val === target) return head.next
-    head.next = removeNode(head.next, target, head)
+    head.next = removeNode(head.next, target)
     return head
 }
